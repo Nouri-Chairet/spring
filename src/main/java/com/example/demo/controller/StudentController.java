@@ -12,7 +12,7 @@ public class StudentController {
 
     @Autowired
     private ExcelImportService excelImportService;
-
+    @CrossOrigin(origins = "*")
     @PostMapping("/import")
     public ResponseEntity<String> importExcel(@RequestParam("file") MultipartFile file) {
         try {
